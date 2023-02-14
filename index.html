@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="skyblue">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 for 1 000 000</title>
+
+    <link rel="stylesheet" href="messtyles.css">
+    <script src="monscript.js" defer></script>
+</head>
+
+<body>
+  <div id="titre">
+    <div id="ffm">4 for 1 000 000</div>
+      Votre portefeuille:  <span id="score"></span>
+  </div>
+
+ <div id="texte">
+  <p id="tourne">Nous avons caché des lots incroyables derrière 4 nombres compris entre 1 et 20 !</p>
+  <p id="lorem">Devinez 2 nombres pour gagner 10 000 FC ; 3 nombres pour 100 000 FC et les <strong>4 pour 1 000 000</strong>  de FC !!!</p>
+  <button id="jouer">Jouer à 2000 FC</button>
+</div>
+
+
+    <div id="game">
+      <form action="">
+      <p class="labelle">Entrez vos 4 suppositions: </p>
+      <input type="number" min="1" max="20" required id="s1" class="supp" placeholder="x">
+      <input type="number" min="1" max="20" required id="s2" class="supp" placeholder="x">
+      <input type="number" min="1" max="20" required id="s3" class="supp" placeholder="x">
+      <input type="number" min="1" max="20" required id="s4" class="supp" placeholder="x">
+      <input type="submit" value="Soumettre" class="soumettre">
+    </form>
+    </div>
+
+
+    <div id="resultat">
+      .
+    </div>
+
+  </body>
+</html>
