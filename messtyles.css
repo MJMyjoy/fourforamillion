@@ -128,7 +128,7 @@ input[type="number"]
   {
     padding: 2px;
   border: 1px solid #CCC;
-    width: 30px;
+    width: 35px;
     outline: none;
     border: 1px solid gray;
     border-radius: 3px;
@@ -143,19 +143,15 @@ input:focus
   -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
   box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
   }
-  .correct {
-  border-color: rgba(68, 191, 68, 0.75);
-  }
-  .correct:focus {
+  
+  input:valid {
   border-color: rgba(68, 191, 68, 0.75);
   -moz-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
   -webkit-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
   box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
   }
-  .incorrect {
-  border-color: rgba(191, 68, 68, 0.75);
-  }
-  .incorrect:focus {
+  
+  input:invalid {
   border-color: rgba(191, 68, 68, 0.75);
   -moz-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
   -webkit-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
@@ -182,14 +178,8 @@ input:focus
   font-size: 14px;
 }
 
-#untest, #deuxtests, #troistests
+#reussite
 {
 
   animation: couleurs 1s ease-in-out infinite alternate-reverse;
 } 
-
-#quatre
-{
-  color: yellow;
-  animation: couleurs 1s ease-in-out infinite alternate-reverse;
-}
