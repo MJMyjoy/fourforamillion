@@ -71,7 +71,7 @@ soumettre.onclick = function() {
   /* S'il y a des valeurs egales */
   if (parseInt(supp[0].value)==parseInt(supp[1].value) || parseInt(supp[0].value)==parseInt(supp[2].value) || parseInt(supp[0].value)==parseInt(supp[3].value) || parseInt(supp[1].value)==parseInt(supp[2].value) || parseInt(supp[1].value)==parseInt(supp[3].value) || parseInt(supp[2].value)==parseInt(supp[3].value))
   {
-    labelle.innerHTML="Les valeurs doivent être toutes différentes!";
+    labelle.innerHTML="Les valeurs doivent être toutes différentes !";
     labelle.style.color ="red";
   }
   else
