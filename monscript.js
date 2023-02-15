@@ -5,6 +5,8 @@ let a2 = 0;
 let a3 = 0;
 let a4 = 0;
 
+/* Toutes les valeurs doivent etres differentes */
+
 while (a1==a2 || a1==a3 || a1==a4 || a2==a3 || a2==a4 || a3==a4)
 {
  a1 = Math.floor(Math.random() * 20) + 1;
@@ -36,18 +38,20 @@ score.textContent = monscore +" FC";
 /* Les evenements */
 
 jouer.onclick = function () {
-  for(let i=0; i<supp.length; i++)
-  {
-    supp[i].value="";
-  }
-  
-
+ 
   if (monscore<2000)
   {
       texte.innerHTML = '<span id="alerte"><br>Oups! Vous ne pouvez plus vous payer une nouvelle partie</span>'
   }
   else
-  {  
+  {     
+    for(let i=0; i<supp.length; i++)
+    {
+      /* on retire les IDs de correcte */
+      supp[i].removeAttribute("id");
+      supp[i].value="";
+    }
+    
     labelle.innerHTML="Entrez vos 4 suppositions: ";
     labelle.style.color ="black";
 
@@ -68,7 +72,7 @@ jouer.onclick = function () {
 
 soumettre.onclick = function() {
 
-  /* S'il y a des valeurs egales */
+  /*  On verifie s'il y a des valeurs egales */
   if (parseInt(supp[0].value)==parseInt(supp[1].value) || parseInt(supp[0].value)==parseInt(supp[2].value) || parseInt(supp[0].value)==parseInt(supp[3].value) || parseInt(supp[1].value)==parseInt(supp[2].value) || parseInt(supp[1].value)==parseInt(supp[3].value) || parseInt(supp[2].value)==parseInt(supp[3].value))
   {
     labelle.innerHTML="Les valeurs doivent être toutes différentes !";
@@ -86,8 +90,7 @@ soumettre.onclick = function() {
       if(parseInt(supp[i].value)===a1 || parseInt(supp[i].value)===a2 || parseInt(supp[i].value)===a3 || parseInt(supp[i].value)===a4)
         {
           test++;
-          supp[i].style.borderColor = "yellow";
-          supp[i].style.boxShadow= "0 0 8px yellow";
+          supp[i].id = "correcte"+i;
         }
     }
 
@@ -98,7 +101,7 @@ if (test==4)
   {
     monscore += 1000000;
     score.textContent = monscore +" FC";
-    resultat.innerHTML = '<p id="reussite">Ffélicitations! Vous venez de gagner <strong>1 000 000 de FC</strong> !<br>Vous avez deviné correctement tous les 4 nombres choisis.</p>';
+    resultat.innerHTML = '<p id="reussite">Félicitations! Vous venez de gagner <strong>1 000 000 de FC</strong> !<br>Vous avez deviné correctement tous les 4 nombres choisis.</p>';
   }
 else if (test==3)
   {
