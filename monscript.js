@@ -1,19 +1,11 @@
 /* Les valeurs aleatoires */
 
-let a1 = 0;
-let a2 = 0;
-let a3 = 0;
-let a4 = 0;
+let a1;
+let a2;
+let a3;
+let a4;
 
-/* Toutes les valeurs doivent etres differentes */
 
-while (a1==a2 || a1==a3 || a1==a4 || a2==a3 || a2==a4 || a3==a4)
-{
- a1 = Math.floor(Math.random() * 20) + 1;
- a2 = Math.floor(Math.random() * 20) + 1;
- a3 = Math.floor(Math.random() * 20) + 1;
- a4 = Math.floor(Math.random() * 20) + 1;
-}
 
 
 /* Declaration des variables */
@@ -45,6 +37,20 @@ jouer.onclick = function () {
   }
   else
   {     
+  a1 = 0;
+  a2 = 0;
+  a3 = 0;
+  a4 = 0;
+
+/* Toutes les valeurs doivent etres differentes */
+
+  while (a1==a2 || a1==a3 || a1==a4 || a2==a3 || a2==a4 || a3==a4)
+  {
+  a1 = Math.floor(Math.random() * 20) + 1;
+  a2 = Math.floor(Math.random() * 20) + 1;
+  a3 = Math.floor(Math.random() * 20) + 1;
+  a4 = Math.floor(Math.random() * 20) + 1;
+  }
     for(let i=0; i<supp.length; i++)
     {
       /* on retire les IDs de correcte */
