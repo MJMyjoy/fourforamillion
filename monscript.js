@@ -86,6 +86,8 @@ soumettre.onclick = function() {
       if(parseInt(supp[i].value)===a1 || parseInt(supp[i].value)===a2 || parseInt(supp[i].value)===a3 || parseInt(supp[i].value)===a4)
         {
           test++;
+          supp[i].style.borderColor = "yellow";
+          supp[i].style.boxShadow= "0 0 8px yellow";
         }
     }
 
