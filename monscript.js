@@ -31,12 +31,8 @@ score.textContent = monscore +" FC";
 
 jouer.onclick = function () {
  
-  if (monscore<2000)
-  {
-      texte.innerHTML = '<span id="alerte"><br>Oups! Vous ne pouvez plus vous payer une nouvelle partie</span>'
-  }
-  else
-  {     
+  /* Generer les 4 nombres gagnants */
+  
   a1 = 0;
   a2 = 0;
   a3 = 0;
@@ -51,6 +47,16 @@ jouer.onclick = function () {
   a3 = Math.floor(Math.random() * 20) + 1;
   a4 = Math.floor(Math.random() * 20) + 1;
   }
+
+
+  if (monscore<2000)
+  {
+      texte.innerHTML = '<span id="alerte"><br>Oups! Vous ne pouvez plus vous payer une nouvelle partie</span>';
+      soumettre.style.transform = "scale(0)";
+  }
+  else
+  {     
+ 
     for(let i=0; i<supp.length; i++)
     {
       /* on retire les IDs de correcte */
